@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=""UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKBIR ENTERPRISE LTD</title>
+    <style>
+        .top-ribbon{
+            background-color: white;
+            width: 100%;
+            height: 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: right;
+            justify-content: space-between;
+            padding: 0 80px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        /*logo styling */
+        .logo-container{
+            display: flex;
+            align-items: center;
+        }
+        .logo{
+            height: 50px;
+            width: auto;
+        }
+        body{
+            background-image: "truck_1.jpg";
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(184, 183, 175);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            transition: background-image 1s ease-in-out;
+        }
+        .container-fluid{
+            text-align: left;
+            padding: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 90px;
+        }
+        /* moving text animation */
+        @keyframes moveText {
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+        .moving-text{
+            white-space: nowrap;
+            overflow: visible;
+            display: block;
+            width: 100%;
+            animation: moveText 10s linear infinite;
+            font-weight: bolder;
+            font-size: 30px;
+            color: rgb(19, 17, 16);
+        }
+        /* .content {
+            text-align:left;
+            padding: 50px;
+            background: grba(0,0,0,0.5);
+            color: black;
+            font-weight: 900; 
+        }*/
+        .button{
+            padding: 15px 130px;
+            background-color: black;
+            color: rgb(228, 220, 220);
+            border: none;
+            cursor: pointer;
+            bottom: 90px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px;
+                }
+                .button:hover{
+                    background-color:#141516;
+                }
+        </style>
+    </head> 
+    <body>
+        <div class="top-ribbon">
+            <div class="logo-container">
+                <img src="logo.jpeg">alt="company logo" class="logo">
+        <div class="container-fluid">
+                <h2 class="logo">TAKBIR ENTERPRISE LTD COMPANY</h2>
+                    <nav>
+                        <ul>
+                          <li><a href="#home"><b>Home</b></a></li>
+                          <li><a href="#about"><b>About</b></a></li>
+                          <li><a href="#services"><b>Services</b></a></li>
+                          <li><a href="#contact"><b>Contact<b></a></li>
+                          <li><a href="#privacy"><b>privacy</b></a></li>
+                        </ul>
+                      </nav>
+                      </div>
+                      </div>
+                      </div>
+                      
+                      <!--moving text-->
+                     <!--<h1>Welcome to our company</h1>
+                     <div class="content">
+                        <p>The company offers efficient freight transport,high-quality salt,petrol,diesel<br> and durable car tires, focusing on safety,performance and timely services.</p>
+ <p>Our company specializes in transporting freight efficiently across various regions,<br> ensuring timely and secure deliveries for all your goods.<br> We also provide high-quality salt for industrial and commercial use,<br> sourced from reliable producers. Additionally,<br> we offer petroleum products, including petrol and diesel,<br> to keep your vehicles running smoothly. For automotive needs,</br> we sell durable car tires, catering to various vehicle types and ensuring safety and reliability 
+</p>
+<button class="btn">contact us</button>
+                        </div> -->
+                        <p class="moving-text">Welcome to TAKBIR ENTERPRISE LTD - We provide freight transport, high-quality salt, petrol, diesel, and car tires.</p>
+<script>
+    //Array of background images
+    const images = [
+        "truck_1.jpg",
+        "truck_3.jpg",
+        "truck_4.jpg"
+    ];
+    let index = 0;
+    function changeBackground(){
+        document.body.style.backgroundImage = `url('${images[index]}')`;
+        index = (index + 1) % images.length;//loop through images
+    }
+    setInterval(changeBackground, 10000);//change every 10 seconds
+    changeBackground();
+    </script>
+                        <!-- <script src="script.js"></script> -->
+                        </body>
+                        </html>
+                        
+</html>
