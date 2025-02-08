@@ -1,222 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset=""UTF-8>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAKBIR ENTERPRISE LTD</title>
+    <title>Our Services</title>
     <style>
-        *{
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0f2c; /* Dark blue background */
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        /* smooth scrolling effect*/
-        html{
-            scroll-behaviour: smooth;
-        }
-/* fixed header */
-        .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white; /* White background */
-            padding: 8px 12px;
-            border-bottom: 1px solid #ddd;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-            
-        /*logo styling */
-        .logo{
-            display: flex;
-            align-items: left;
-            gap: 10px
-        }
-        .logo img{
-            height: 90px;
-            width: auto;
-        }
-        body{
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: rgb(184, 183, 175);
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 25px;
-            transition: background-image 1s ease-in-out;
-            min-height: 100vh;
-            padding-top: 110px;
-        }
-        .container-fluid{
-            text-align: left;
-            padding: 10px;
-            margin-top: 40px;
-        }
-        /* Navigation */
-        nav ul {
-            life-style: none;
-            display: flex;
-            gap: 30px;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 18px; 
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 60px;
-            padding-top: 40px;
-        
-        }
-        /* moving text animation */
-        @keyframes moveText {
-            from{
-                transform: translateX(100%);
-            }
-            to{
-                transform: translateX(-100%);
-            }
-        
-        }
-        .moving-text{
-            white-space: nowrap;
-            overflow: visible;
-            display: block;
-            width: 100%;
-            animation: moveText 10s linear infinite;
-            font-weight: bolder;
-            font-size: 21px;
-            color: rgb(216, 78, 9);
+            text-align: center;
         }
 
-                /* Moving text container */
-                .moving-text-container {
-            position: fixed;
-           margin-top: 300px; /* Below navigation */
-            width: 100%;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
+        /* Section Styling */
+        .services-section {
+            padding: 50px 20px;
         }
-        .button{
-            padding: 15px 130px;
-            background-color: black;
-            color: rgb(228, 220, 220);
-            border: none;
-            cursor: pointer;
-            bottom: 90px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 20px;
-                }
-                .button:hover{
-                    background-color:#141516;
-                }
-                body{
-                    margin-top: 20;
-                }
-                  /* Full-page sections */
-        .section {
-            height: 100vh;
+
+        .services-container {
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            transition: background-color 0.5s ease-in-out;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        #section1 {
-            background-image: url('truck_1.jpg');
-            background-size: cover;
-            background-position: center;
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
         }
-        #section2 { background-color: orange; }
-        #section3 { background-color: lightblue; }
-        #section4 { background-color: lightgreen; }
-        #section5 { background-color: lightcoral; }
-        #section6 { background-color: gray; }
-        </style>
-    </head> 
-    <body>
-        <div class="header">
-            <div class="logo">
-                <img src="logo.jpeg"alt="company logo" class="logo">
-        <div class="container-fluid">
-                    <nav>
-                        <ul>
-                          <li><a href="#Home"><b>Home</b></a></li>
-                          <li><a href="#About us"><b>About us</b></a></li>
-                          <li><a href="#Product&Services"><b>Product&Services</b></a></li>
-                          <li><a href="#contact us"><b>Contact us<b></a></li>
-                          <li><a href="#privacy"><b>privacy</b></a></li>
-                        </ul>
-                      </nav>
-                      </div>
-                      </div>
-                      </div>
-                      <!--moving text session-->
-                        <!-- <p class="moving-text">Welcome to TAKBIR ENTERPRISE LTD - We provide freight transport, high-quality salt, petrol, diesel, and car tires.</p> -->
-                        <div class="moving-text">
-                            <span class="moving-text-container">
-                                Welcome to TAKBIR ENTERPRISE LTD - We provide freight transport, high-quality salt, petrol, diesel, and car tires.
-                            </span>
-                        </div>
-           <!-- Full-page sections -->
-    <section class="section" id="section1"></section>
-    <section class="section" id="section2">About Us</section>
-    <section class="section" id="section3">Our Products & Services</section>
-    <section class="section" id="section4">Contact Us</section>
-    <section class="section" id="section5">Privacy Policy</section>
-    <section class="section" id="section6">More Information</section>              
-<script>
-    //Array of background images
-    const images = [
-        "truck_1.jpg",
-        "truck_3.jpg",
-        "truck_4.jpg"
-    ];
-    let index = 0;
-    function changeBackground(){
-        document.body.style.backgroundImage = `url('${images[index]}')`;
-        index = (index + 1) % images.length;//loop through images
-    }
-    setInterval(changeBackground, 10000);//change every 10 seconds
-    changeBackground();
-    
-        // Enable full-page scrolling
-        let sections = document.querySelectorAll(".section");
-        let currentSection = 0;
-        let isScrolling = false;
 
-        window.addEventListener("wheel", (event) => {
-            if (isScrolling) return;
-            isScrolling = true;
-            setTimeout(() => isScrolling = false, 800);
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+        }
 
-            if (event.deltaY > 0) {
-                if (currentSection < sections.length - 1) {
-                    currentSection++;
-                }
-            } else {
-                if (currentSection > 0) {
-                    currentSection--;
-                }
-            }
+        .service-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
 
-            sections[currentSection].scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
-                        </body>
-                        </html>
-                        
+        .service-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Custom Colors for Titles */
+        .product-management h3 { color: #1E3A8A; } /* Dark Blue */
+        .order-processing h3 { color: #F59E0B; } /* Orange */
+        .transportation-management h3 { color: #2563EB; } /* Light Blue */
+
+    </style>
+</head>
+<body>
+
+    <section class="services-section" id="section2">
+        <h2 style="color: white;">Our Services</h2>
+        <div class="services-container">
+            <!-- Product Management -->
+            <div class="service-card product-management">
+                <img src="product-management.jpg" alt="Product Management">
+                <h3>Product Management</h3>
+                <p>We oversee inventory, storage, and quality control to ensure smooth product management.</p>
+            </div>
+
+            <!-- Order Processing -->
+            <div class="service-card order-processing">
+                <img src="order-processing.jpg" alt="Order Processing">
+                <h3>Order Processing</h3>
+                <p>Fast and efficient order processing to ensure timely deliveries for our customers.</p>
+            </div>
+
+            <!-- Transportation Management -->
+            <div class="service-card transportation-management">
+                <img src="transportation-management.jpg" alt="Transportation Management">
+                <h3>Transportation Management</h3>
+                <p>We provide safe and reliable transportation services for freight and logistics.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
 </html>
