@@ -1,91 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset=""UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <title>TAKBIR ENTERPRISE LTD</title>
     <style>
-        /* General Styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0a0f2c; /* Dark blue background */
-            color: #333;
+        *{
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
-
-        /* Section Styling */
-        .services-section {
-            padding: 50px 20px;
+        /* smooth scrolling effect*/
+        html{
+            scroll-behavior: smooth;
         }
-
-        .services-container {
+/* fixed header */
+        .header{
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white; /* White background */
+            padding: 8px 12px;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }     
+        /*logo styling */
+        .logo{
+            display: flex;
+            align-items: left;
+            gap: 10px
         }
+        .logo img{
+            height: 90px;
+            width: auto;
+        }
+        body{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(184, 183, 175);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            transition: background-image 1s ease-in-out;
+            min-height: 100vh;
+            padding-top: 110px;
+        }
+        .container-fluid{
+            text-align: left;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        /* Navigation */
+        nav {
+            display: flex;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            /* margin-right: 60px;
+            padding-top: 40px; */
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(22, 96, 182);
+            font-weight: bold;
+        }
+        /* moving text animation */
+        @keyframes moveText {
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+        .moving-text{
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            animation: moveText 10s linear infinite;
+            font-weight: bolder;
+            font-size: 21px;
+            color: rgb(216, 78, 9);
+        }
+                /* Moving text container */
+                .moving-text-container {
+            position: fixed;
+           top: 110px; /* Below navigation */
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+        .button{
+            padding: 15px 130px;
+            background-color: black;
+            color: rgb(228, 220, 220);
+            border: none;
+            cursor: pointer;
+            bottom: 90px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px;
+                }
+                .button:hover{
+                    background-color:#141516;
+                }
+                body{
+                    margin-top: 20;
+                }
+                  /* Full-page sections */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            transition: background-color 0.5s ease-in-out;
+        }
+        #section1 {
+    /* background-image: url('truck_1.jpg'), url('truck_2.jpg'), url('truck_3.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+        #section2 { background-color: orange; }
+        #section3 { background-color: rgb(216, 78 ,9); }
+        #section4 { background-color: lightgreen; }
+        #section5 { background-color: lightcoral; }
+        #section6 { background-color: gray; }
 
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            width: 300px;
+/* ======= SECOND SECTION: SERVICES STYLING ======= */
+.services-section {
+    padding: 50px 20px;
+    background-color: #0a0f2c; /* Dark blue background */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Custom Colors for Titles */
+.product-management h3 { color: #1E3A8A; } /* Dark Blue */
+.order-processing h3 { color: #F59E0B; } /* Orange */
+.transportation-management h3 { color: #1E3A8A; } /* Light Blue */
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+/*THIRD SECTION: ABOUT US */
+.container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .content-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* H3 with Vertical Orange Line */
+    .heading-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .heading-line h3 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #444;
+        flex: 1;
+        text-align: left;
+    }
+
+    .vertical-line {
+        width: 10px; /* Thickness of the vertical line */
+        height: 400px; /* Length of the vertical line */
+        background-color: orange;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .vertical-line::before,
+    .vertical-line::after {
+        content: "";
+        width: 20px; /* Size of the circles */
+        height: 20px;
+        background-color: orange;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .vertical-line::before {
+        top: -10px; /* Adjust circle position */
+    }
+
+    .vertical-line::after {
+        bottom: -10px; /* Adjust circle position */
+    }
+
+    .heading-line p {
+        font-size: 1em;
+        color: #666;
+        flex: 1;
+        text-align: right;
+    }
+
+    /* H4 Sections */
+    .values-section {
+        margin-top: 25px;
+        padding: 15px;
+        background: #fafafa;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .values-section h4 {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #555;
+        margin-top: 20px;
+    }
+
+    .values-section p {
+        font-size: 1em;
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .heading-line {
+            flex-direction: column;
             text-align: center;
         }
 
-        .service-card img {
-            width: 100%;
-            height: 180px;
-            border-radius: 10px;
+        .heading-line h3,
+        .heading-line p {
+            text-align: center;
         }
 
-        .service-card h3 {
-            font-size: 20px;
-            margin: 15px 0;
+        .vertical-line {
+            height: 60px; /* Adjust for smaller screens */
         }
+    }
 
-        .service-card p {
-            font-size: 14px;
-            color: #666;
-        }
 
-        /* Custom Colors for Titles */
-        .product-management h3 { color: #1E3A8A; } /* Dark Blue */
-        .order-processing h3 { color: #F59E0B; } /* Orange */
-        .transportation-management h3 { color: #2563EB; } /* Light Blue */
+        </style>
+    </head> 
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="logo.jpeg"alt="company logo" class="logo">
+        <div class="container-fluid">
+                    <nav>
+                        <ul>
+                          <li><a href="#Home"><b>Home</b></a></li>
+                          <li><a href="#About-us"><b>About us</b></a></li>
+                          <li><a href="#Product&Services"><b>Product&Services</b></a></li>
+                          <li><a href="#contact-us"><b>Contact us<b></a></li>
+                          <li><a href="#privacy"><b>privacy</b></a></li>
+                        </ul>
+                      </nav>
+                      </div>
+                      </div>
+                      </div>
+                      <!--moving text session-->
+                        <!-- <p class="moving-text">Welcome to TAKBIR ENTERPRISE LTD - We provide freight transport, high-quality salt, petrol, diesel, and car tires.</p> -->
+                        <div class="moving-text-container">
+                            <p class="moving-text">
+                                Welcome to TAKBIR ENTERPRISE LTD - We provide freight transport, high-quality salt, petrol, diesel, and car tires.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Full-page sections -->
+             <section class="section" id="section1"></section>
+             <!--SECOND SECTION: SERVICES -->
+             <section class="services-section" id="section2">
+                    <h1 style="color: white; text-align: center; margin-bottom: 40px;">Our Core Services</h1>
+                    <div class="services-container">
 
-    </style>
-</head>
-<body>
+<!--product management services-->
+<div class="service-card product-management">
+    <img src="prodt-management.jpg" alt="product management">
+<h3>Product Management</h3>
+<p>We Offer effective product management services including storage, stock management, and inventory control. Our advanced systems ensure that your products are safely stored, monitored and ready for distribution when needed.</p>
+</div>
 
-    <section class="services-section" id="section2">
-        <h2 style="color: white;">Our Services</h2>
-        <div class="services-container">
-            <!-- Product Management -->
-            <div class="service-card product-management">
-                <img src="product-management.jpg" alt="Product Management">
-                <h3>Product Management</h3>
-                <p>We oversee inventory, storage, and quality control to ensure smooth product management.</p>
-            </div>
-
-            <!-- Order Processing -->
-            <div class="service-card order-processing">
-                <img src="order-processing.jpg" alt="Order Processing">
-                <h3>Order Processing</h3>
-                <p>Fast and efficient order processing to ensure timely deliveries for our customers.</p>
-            </div>
-
-            <!-- Transportation Management -->
-            <div class="service-card transportation-management">
-                <img src="transportation-management.jpg" alt="Transportation Management">
-                <h3>Transportation Management</h3>
-                <p>We provide safe and reliable transportation services for freight and logistics.</p>
-            </div>
+ <!-- Order Processing Service -->
+ <div class="service-card order-processing">
+    <img src="order-processing.jpg" alt="Order Processing">
+    <h3>Order Processing</h3>
+    <p>Our fast and effective order processing ensures quick and accurate order fulfillment. From receiving customer orders to picking, packing, and shipping, we handle all aspects of the process efficiently, improving customer satisfaction and reducing delays.</p>
+</div>
+        <!-- Transportation Management Service -->
+        <div class="service-card transportation-management">
+            <img src="transportation-management.jpg" alt="Transportation Management">
+            <h3>Transportation Management</h3>
+            <p>We provide comprehensive transportation management services including route optimization, carrier management, and real-time tracking. Our goal is to ensure your goods reach their destination on time and within budget, while maintaining the highest standards of safety.</p>
         </div>
-    </section>
+                </div>
+            </section>
+             <section class="section" id="section3">
+                <div class="container">
+                    <h2 class="title">ABOUT US</h2>
+                    <div class="content-box">
+                        
+                        <div class="heading-line">
+                            <h3>TAKBIIR ENTERPRISE LTD</h3>
+                            <div class="vertical-line"></div>
+                            <p>GSM Group is an innovation-driven conglomerate that offers a wide range of services across the African continent.</p>
+                        </div>
+                   <h2 class="title">OUR CORE VALUES</h2>
+                        <div class="values-section">
+                            <h4>Integrity</h4>
+                            <p>We have the utmost care, respect, and compassion for our customers around the world. We always work for the benefit of the communities we serve.</p>
+            
+                            <h4>Accountability</h4>
+                            <p>We conduct our business fairly, with honesty and transparency. Everything we do stands the test of public scrutiny.</p>
+            
+                            <h4>Efficiency</h4>
+                            <p>We constantly strive to achieve the highest possible standard in our daily operations and in the quality of the goods and services we provide.</p>
+            
+                            <h4>Team Work</h4>
+                            <p>We work cohesively with our colleagues across divisions and with our customers and partners around the world, building strong relationships based on tolerance, understanding, and cooperation.</p>
+                        </div>
+            
+                    </div>
+                </div>
+             </section>
+             <section class="section" id="section4">Contact Us</section>
+             <section class="section" id="section5">Privacy Policy</section>
+             <section class="section" id="section6">More Information</section>      
+<script>
+    //Array of background images
+    const images = [
+        "truck_1.jpg",
+        "truck_3.jpg",
+        "truck_4.jpg"
+    ];
+    let index = 0;
+    function changeBackground(){
+        let section1 = document.getElementById("section1");
+        section1.style.backgroundImage = `url(${images[index]})`;
+        index = (index + 1) % images.length;//loop through images
+    }
+    setInterval(changeBackground, 10000);//change every 10 seconds
+    changeBackground();
+     // Enable full-page scrolling
+     let sections = document.querySelectorAll(".section");
+     let navLinks = document.querySelectorAll(".nav-link");
 
-</body>
+     sections.forEach((section, index) => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    navLinks[index].classList.add("active");
+                }
+            });
+
+        let currentSection = 0;
+        let isScrolling = false;
+
+        window.addEventListener("wheel", (event) => {
+            if (isScrolling) return;
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, 1000);
+
+            if (event.deltaY > 0) {
+                if (currentSection < sections.length - 1) {
+                    currentSection++;
+                }
+            } else {
+                if (currentSection > 0) {
+                    currentSection--;
+                }
+            }
+            sections[currentSection].scrollIntoView({ behavior: "smooth", block:"start"});
+            setTimeout(() => {
+        window.location.hash = sections[currentSection].id; // Update URL for history navigation
+    }, 500);
+        });
+        // Detect when section1 is in view and update background
+    document.addEventListener("scroll", function () {
+        let section1 = document.getElementById("section1");
+        let rect = section1.getBoundingClientRect();
+        
+        // If section1 is visible in the viewport, continue changing background
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            changeBackground();
+        }
+    });
+    </script>
+                        </body>
+                        </html>
+                        
 </html>
