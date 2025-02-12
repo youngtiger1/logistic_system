@@ -140,7 +140,7 @@
 }
         #section2 { background-color: orange; }
         #section3 { background-color: rgb(216, 78 ,9); }
-        #section4 { background-color: lightgreen; }
+        #section4 { background-color: orange; }
         #section5 { background-color: lightcoral; }
         #section6 { background-color: gray; }
 
@@ -209,10 +209,14 @@
     }
 
     .content-box {
-        background: #fff;
+        background: rgb(245, 242, 242);
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     }
 
     /* H3 with Vertical Orange Line */
@@ -289,7 +293,46 @@
         line-height: 1.7;
         margin-bottom: 15px;
     }
-
+        .core-values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+            max-width: 900px;
+            margin: auto;
+        }
+        .values-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dark {
+            background-color: #ddc496;
+            color: white;
+        }
+        .light {
+            background-color: #f1f1f1;
+            color: rgb(243, 231, 212);
+        }
+        .values-section h4 {
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(216, 78 ,9);
+        }
+        .values-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .values-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
     /* Responsive Adjustments */
     @media (max-width: 768px) {
         .heading-line {
@@ -305,10 +348,101 @@
         .vertical-line {
             height: 60px; /* Adjust for smaller screens */
         }
+        .core-values {
+                grid-template-columns: 1fr;
+            }
     }
+
+    /* ====== Footer Section Styling ====== */
+.footer-section {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    width: 300px;
+}
+
+.footer-column h3 {
+    color: #ffa500;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffa500;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: #ffa500;
+}
+
+/* ====== Logo Cycling with White Outline ====== */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+    transition: transform 0.5s;
+    animation: cycle-outline 2s infinite;
+}
+
+@keyframes cycle-outline {
+    0% {
+        filter: drop-shadow(0 0 0px white);
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px white);
+        transform: scale(1.05);
+    }
+    100% {
+        filter: drop-shadow(0 0 0px white);
+        transform: scale(1);
+    }
+}
 
 
         </style>
+        <!-- Latest Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     </head> 
     <body>
         <div class="header">
@@ -319,9 +453,9 @@
                         <ul>
                           <li><a href="#Home"><b>Home</b></a></li>
                           <li><a href="#About-us"><b>About us</b></a></li>
-                          <li><a href="#Product&Services"><b>Product&Services</b></a></li>
+                          <li><a href="#Services"><b>Services</b></a></li>
                           <li><a href="#contact-us"><b>Contact us<b></a></li>
-                          <li><a href="#privacy"><b>privacy</b></a></li>
+                          <!-- <li><a href="#privacy"><b>privacy</b></a></li> -->
                         </ul>
                       </nav>
                       </div>
@@ -363,6 +497,7 @@
         </div>
                 </div>
             </section>
+            <!--THIRD SECTION-->
              <section class="section" id="section3">
                 <div class="container">
                     <h2 class="title">ABOUT US</h2>
@@ -371,19 +506,33 @@
                         <div class="heading-line">
                             <h3>TAKBIIR ENTERPRISE LTD</h3>
                             <div class="vertical-line"></div>
-                            <p>GSM Group is an innovation-driven conglomerate that offers a wide range of services across the African continent.</p>
+                            <p style="font-size: 22px;"> <br>is a company involved in the sale and transportation of goods such as salt, petrol, diesel, and vehicle tires. They also distribute products like salt to various regions across Tanzania and handle cargo transportation.</p>
                         </div>
-                   <h2 class="title">OUR CORE VALUES</h2>
-                        <div class="values-section">
+
+                   <!-- <h2 class="title">OUR CORE VALUES</h2> -->
+                   <h2 style="color: #555; text-align: center; margin-top: 60px;">OUR CORE VALUES</h2>
+                   <div class="core-values">     
+                   <!--First Row-->
+                   <div class="values-section dark">
+                            <img src="integrity-icon.jpg" alt="Integrity">
                             <h4>Integrity</h4>
-                            <p>We have the utmost care, respect, and compassion for our customers around the world. We always work for the benefit of the communities we serve.</p>
-            
+                         <p>We have the utmost care, respect, and compassion for our customers around the world. We always work for the benefit of the communities we serve.</p>
+                        </div>
+
+                        <div class="values-section light">
+                            <img src="Accountability-icon.jpg" alt="Accountability">
                             <h4>Accountability</h4>
                             <p>We conduct our business fairly, with honesty and transparency. Everything we do stands the test of public scrutiny.</p>
-            
+                        </div>
+
+                        <div class="values-section light ">
+                             <img src="Efficiency-icon.jpg" alt="Efficiency"> 
                             <h4>Efficiency</h4>
                             <p>We constantly strive to achieve the highest possible standard in our daily operations and in the quality of the goods and services we provide.</p>
-            
+                        </div>
+
+                        <div class="values-section dark ">
+                             <img src="Team-Work-icon.jpg" alt="Team Work"> 
                             <h4>Team Work</h4>
                             <p>We work cohesively with our colleagues across divisions and with our customers and partners around the world, building strong relationships based on tolerance, understanding, and cooperation.</p>
                         </div>
@@ -391,9 +540,46 @@
                     </div>
                 </div>
              </section>
-             <section class="section" id="section4">Contact Us</section>
-             <section class="section" id="section5">Privacy Policy</section>
-             <section class="section" id="section6">More Information</section>      
+             <!-- Section 4: Footer -->
+              <section class="footer-section" id="section4">
+                <div class="footer-container">
+                    <!--Company Information-->
+                    <div class="footer-column">
+                        <img src="logo.jpeg" alt="Company Logo" class="footer-logo">
+                        <h3>Company Information</h3>
+                        <p>TAKBIR ENTERPRISE LTD is a leading logistics company providing quality products and services, including salt, diesel, petrol, car wheels, and freight transportation.</p>
+                    </div>
+                        
+                    <!--Contact Information-->
+                    <div class="footer-column">
+                        <h3>Contact Information</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-phone"></i> +255 742 066 086</li>
+                            <li><i class="fas fa-phone"></i> +255 753 066 086</li>
+                            <li><i class="fas fa-envelope"></i> takbiirenterprise@gmail.com</li>
+                            <li><i class="fas fa-box"></i> P.O. Box 80,</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Dar es Salaam,Tanzania.</li>
+                        </ul>
+                    </div>
+ <!-- Quick Links -->
+ <div class="footer-column">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About-us">About Us</a></li>
+        <li><a href="#Product&Services">Product & Services</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+</div>
+</div>
+<!--Coptrights and legal Information-->
+<div class="footer-bottom">
+<p>© <span id="year"></span> TAKBIR ENTERPRISE LTD. All rights reserved.</p>
+</div>
+              </section> 
+             <!-- <section class="section" id="section5">Privacy Policy</section> 
+             <section class="section" id="section6">More Information</section>       -->
 <script>
     //Array of background images
     const images = [
@@ -453,6 +639,12 @@
             changeBackground();
         }
     });
+
+    // Auto-update year
+const yearElement = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+yearElement.textContent = currentYear;
+
     </script>
                         </body>
                         </html>
